@@ -384,98 +384,41 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/active.js"></script>
     
 <script>
-      const canvas = document.getElementById("bezierCanvas");
+         const canvas = document.getElementById("bezierCanvas");
 const ctx = canvas.getContext("2d");
 
 
-const scale = 0.03;
+const scale = 0.045;
 const offsetX = 0; 
 const offsetY = 0; 
-const dropOffsetY = 15; 
+
 
 
 ctx.beginPath();
-ctx.moveTo(2510 * scale + offsetX, 5050 * scale + offsetY);
+ctx.moveTo(890 * scale + offsetX, 0.1 * scale + offsetY);
+ctx.lineTo(890* scale + offsetX, 670 * scale + offsetY);
+ctx.bezierCurveTo(1050 * scale + offsetX,1250  * scale + offsetY, 2250 * scale + offsetX, 1250 * scale + offsetY, 2400 * scale + offsetX, 670 * scale + offsetY);
+ctx.lineTo(2400* scale + offsetX, 0.1 * scale + offsetY);
+ctx.bezierCurveTo(2700 * scale + offsetX, 20 * scale + offsetY, 3100 * scale + offsetX, 200 * scale + offsetY, 3300 * scale + offsetX, 320 * scale + offsetY)
+ctx.bezierCurveTo(3100 * scale + offsetX,1500  * scale + offsetY, 220 * scale + offsetX, 1500 * scale + offsetY, 0.1 * scale + offsetX, 320 * scale + offsetY)
+ctx.bezierCurveTo(180 * scale + offsetX, 180 * scale + offsetY, 500 * scale + offsetX, 30 * scale + offsetY, 890 * scale + offsetX, 0.1 * scale + offsetY)
+ctx.fillStyle = "black";
+ctx.fill();
+
+ctx.moveTo(890 * scale + offsetX, 2000 * scale + offsetY);
+ctx.lineTo(890* scale + offsetX, 1330 * scale + offsetY);
+ctx.bezierCurveTo(940 * scale + offsetX,650  * scale + offsetY, 2350 * scale + offsetX, 650 * scale + offsetY, 2400 * scale + offsetX, 1330 * scale + offsetY);
+ctx.lineTo(2400* scale + offsetX, 2000 * scale + offsetY);
+ctx.bezierCurveTo(2800 * scale + offsetX, 1900 * scale + offsetY, 3100 * scale + offsetX, 1700 * scale + offsetY, 3300 * scale + offsetX, 1600 * scale + offsetY)
+ctx.bezierCurveTo(3100 * scale + offsetX,450  * scale + offsetY, 250 * scale + offsetX, 450 * scale + offsetY, 0.1 * scale + offsetX, 1600 * scale + offsetY)
+ctx.bezierCurveTo(250 * scale + offsetX, 1800 * scale + offsetY, 500 * scale + offsetX, 1900 * scale + offsetY, 890 * scale + offsetX, 2000 * scale + offsetY)
 
 
-ctx.bezierCurveTo(1887 * scale + offsetX, 4943 * scale + offsetY, 1032 * scale + offsetX, 4639 * scale + offsetY, 588 * scale + offsetX, 4367 * scale + offsetY);
-ctx.bezierCurveTo(588 * scale + offsetX, 4367 * scale + offsetY, 521 * scale + offsetX, 4326 * scale + offsetY, 521 * scale + offsetX, 4326 * scale + offsetY);
-ctx.bezierCurveTo(521 * scale + offsetX, 4326 * scale + offsetY, 526 * scale + offsetX, 4280 * scale + offsetY, 526 * scale + offsetX, 4280 * scale + offsetY);
-ctx.bezierCurveTo(552 * scale + offsetX, 4047 * scale + offsetY, 637 * scale + offsetX, 3832 * scale + offsetY, 788 * scale + offsetX, 3620 * scale + offsetY);
-ctx.bezierCurveTo(880 * scale + offsetX, 3490 * scale + offsetY, 1096 * scale + offsetX, 3275 * scale + offsetY, 1252 * scale + offsetX, 3159 * scale + offsetY);
-ctx.bezierCurveTo(1447 * scale + offsetX, 3014 * scale + offsetY, 1701 * scale + offsetX, 2863 * scale + offsetY, 1898 * scale + offsetX, 2774 * scale + offsetY);
-ctx.bezierCurveTo(1943 * scale + offsetX, 2754 * scale + offsetY, 1980 * scale + offsetX, 2734 * scale + offsetY, 1980 * scale + offsetX, 2731 * scale + offsetY);
-ctx.bezierCurveTo(1979 * scale + offsetX, 2728 * scale + offsetY, 1904 * scale + offsetX, 2688 * scale + offsetY, 1812 * scale + offsetX, 2643 * scale + offsetY);
-ctx.bezierCurveTo(1194 * scale + offsetX, 2341 * scale + offsetY, 763 * scale + offsetX, 1931 * scale + offsetY, 597 * scale + offsetX, 1488 * scale + offsetY);
-ctx.bezierCurveTo(567 * scale + offsetX, 1410 * scale + offsetY, 533 * scale + offsetX, 1256 * scale + offsetY, 529 * scale + offsetX, 1185 * scale + offsetY);
-ctx.bezierCurveTo(526 * scale + offsetX, 1135 * scale + offsetY, 526 * scale + offsetX, 1135 * scale + offsetY, 575 * scale + offsetX, 1102 * scale + offsetY);
-ctx.bezierCurveTo(742 * scale + offsetX, 992 * scale + offsetY, 1215 * scale + offsetX, 783 * scale + offsetY, 1612 * scale + offsetX, 645 * scale + offsetY);
-ctx.bezierCurveTo(1908 * scale + offsetX, 541 * scale + offsetY, 2479 * scale + offsetX, 401 * scale + offsetY, 2607 * scale + offsetX, 400 * scale + offsetY);
-ctx.bezierCurveTo(2639 * scale + offsetX, 400 * scale + offsetY, 2639 * scale + offsetX, 400 * scale + offsetY, 2642 * scale + offsetX, 1178 * scale + offsetY);
-ctx.bezierCurveTo(2646 * scale + offsetX, 1954 * scale + offsetY, 2646 * scale + offsetX, 1955 * scale + offsetY, 2668 * scale + offsetX, 2030 * scale + offsetY);
-ctx.bezierCurveTo(2700 * scale + offsetX, 2134 * scale + offsetY, 2767 * scale + offsetX, 2271 * scale + offsetY, 2830 * scale + offsetX, 2359 * scale + offsetY);
-ctx.bezierCurveTo(2889 * scale + offsetX, 2442 * scale + offsetY, 2867 * scale + offsetX, 2438 * scale + offsetY, 3040 * scale + offsetX, 2400 * scale + offsetY);
-ctx.bezierCurveTo(3281 * scale + offsetX, 2347 * scale + offsetY, 3598 * scale + offsetX, 2299 * scale + offsetY, 3870 * scale + offsetX, 2275 * scale + offsetY);
-ctx.bezierCurveTo(4113 * scale + offsetX, 2252 * scale + offsetY, 4650 * scale + offsetX, 2244 * scale + offsetY, 4891 * scale + offsetX, 2259 * scale + offsetY);
-ctx.bezierCurveTo(5253 * scale + offsetX, 2281 * scale + offsetY, 5564 * scale + offsetX, 2321 * scale + offsetY, 5880 * scale + offsetX, 2387 * scale + offsetY);
-ctx.bezierCurveTo(5976 * scale + offsetX, 2407 * scale + offsetY, 6067 * scale + offsetX, 2425 * scale + offsetY, 6081 * scale + offsetX, 2427 * scale + offsetY);
-ctx.bezierCurveTo(6102 * scale + offsetX, 2431 * scale + offsetY, 6113 * scale + offsetX, 2424 * scale + offsetY, 6137 * scale + offsetX, 2393 * scale + offsetY);
-ctx.bezierCurveTo(6188 * scale + offsetX, 2329 * scale + offsetY, 6257 * scale + offsetX, 2209 * scale + offsetY, 6289 * scale + offsetX, 2129 * scale + offsetY);
-ctx.bezierCurveTo(6349 * scale + offsetX, 1976 * scale + offsetY, 6350 * scale + offsetX, 1962 * scale + offsetY, 6350 * scale + offsetX, 1144 * scale + offsetY);
-ctx.bezierCurveTo(6350 * scale + offsetX, 400 * scale + offsetY, 6350 * scale + offsetX, 400 * scale + offsetY, 6381 * scale + offsetX, 400 * scale + offsetY);
-ctx.bezierCurveTo(6476 * scale + offsetX, 400 * scale + offsetY, 6914 * scale + offsetX, 499 * scale + offsetY, 7195 * scale + offsetX, 585 * scale + offsetY);
-ctx.bezierCurveTo(7581 * scale + offsetX, 702 * scale + offsetY, 8138 * scale + offsetX, 936 * scale + offsetY, 8392 * scale + offsetX, 1088 * scale + offsetY);
-ctx.bezierCurveTo(8392 * scale + offsetX, 1088 * scale + offsetY, 8471 * scale + offsetX, 1134 * scale + offsetY, 8471 * scale + offsetX, 1134 * scale + offsetY);
-ctx.bezierCurveTo(8437 * scale + offsetX, 1444 * scale + offsetY, 8328 * scale + offsetX, 1691 * scale + offsetY, 8143 * scale + offsetX, 1920 * scale + offsetY);
-ctx.bezierCurveTo(8071 * scale + offsetX, 2009 * scale + offsetY, 7893 * scale + offsetX, 2183 * scale + offsetY, 7795 * scale + offsetX, 2262 * scale + offsetY);
-ctx.bezierCurveTo(7616 * scale + offsetX, 2404 * scale + offsetY, 7357 * scale + offsetX, 2562 * scale + offsetY, 7127 * scale + offsetX, 2670 * scale + offsetY);
-ctx.bezierCurveTo(7063 * scale + offsetX, 2700 * scale + offsetY, 7010 * scale + offsetX, 2728 * scale + offsetY, 7010 * scale + offsetX, 2731 * scale + offsetY);
-ctx.bezierCurveTo(7052 * scale + offsetX, 2756 * scale + offsetY, 7103 * scale + offsetX, 2779 * scale + offsetY, 7407 * scale + offsetX, 2918 * scale + offsetY);
-ctx.bezierCurveTo(7743 * scale + offsetX, 3140 * scale + offsetY, 7957 * scale + offsetX, 3344 * scale + offsetY, 8257 * scale + offsetX, 3630 * scale + offsetY);
-ctx.bezierCurveTo(8423 * scale + offsetX, 3935 * scale + offsetY, 8464 * scale + offsetX, 4275 * scale + offsetY, 8470 * scale + offsetX, 4325 * scale + offsetY);
-ctx.bezierCurveTo(8412 * scale + offsetX, 4361 * scale + offsetY, 8167 * scale + offsetX, 4517 * scale + offsetY, 7591 * scale + offsetX, 4758 * scale + offsetY);
-ctx.bezierCurveTo(6909 * scale + offsetX, 4962 * scale + offsetY, 6577 * scale + offsetX, 5039 * scale + offsetY, 6393 * scale + offsetX, 5064 * scale + offsetY);
-ctx.bezierCurveTo(6351 * scale + offsetX, 5070 * scale + offsetY, 6348 * scale + offsetX, 4293 * scale + offsetY, 6322 * scale + offsetX, 3435 * scale + offsetY);
-ctx.bezierCurveTo(6294 * scale + offsetX, 3334 * scale + offsetY, 6227 * scale + offsetX, 3196 * scale + offsetY, 6160 * scale + offsetX, 3102 * scale + offsetY);
-ctx.bezierCurveTo(6118 * scale + offsetX, 3042 * scale + offsetY, 6104 * scale + offsetX, 3029 * scale + offsetY, 6087 * scale + offsetX, 3033 * scale + offsetY);
-ctx.bezierCurveTo(5495 * scale + offsetX, 3164 * scale + offsetY, 5063 * scale + offsetX, 3211 * scale + offsetY, 4465 * scale + offsetX, 3211 * scale + offsetY);
-ctx.bezierCurveTo(4295 * scale + offsetX, 3210 * scale + offsetY, 4144 * scale + offsetX, 3208 * scale + offsetY, 4130 * scale + offsetX, 3206 * scale + offsetY);
-ctx.bezierCurveTo(4116 * scale + offsetX, 3204 * scale + offsetY, 4056 * scale + offsetX, 3199 * scale + offsetY, 3995 * scale + offsetX, 3195 * scale + offsetY);
-ctx.bezierCurveTo(3677 * scale + offsetX, 3176 * scale + offsetY, 3261 * scale + offsetX, 3115 * scale + offsetY, 2903 * scale + offsetX, 3033 * scale + offsetY);
-ctx.bezierCurveTo(2860 * scale + offsetX, 3023 * scale + offsetY, 2726 * scale + offsetX, 3248 * scale + offsetY, 2673 * scale + offsetX, 3417 * scale + offsetY);
-ctx.bezierCurveTo(2645 * scale + offsetX, 3505 * scale + offsetY, 2642 * scale + offsetX, 4288 * scale + offsetY, 2627 * scale + offsetX, 5069 * scale + offsetY);
-ctx.bezierCurveTo(2568 * scale + offsetX, 5060 * scale + offsetY, 2510 * scale + offsetX, 5050 * scale + offsetY, 2510 * scale + offsetX, 5050 * scale + offsetY);
 
 ctx.fillStyle = "black";
 ctx.fill();
 ctx.strokeStyle = "black";
 ctx.stroke();
-
-
-
-//const scaleX = 250 / 500;  
-//const scaleY = 180 / 500;  
-//const dropOffsetY = 0; 
-
-//ctx.beginPath();
-//ctx.moveTo(292 * scaleX, (254 + dropOffsetY) * scaleY);
-//ctx.bezierCurveTo(
- //   347 * scaleX, (287 + dropOffsetY) * scaleY,
- //   462 * scaleX, (293 + dropOffsetY) * scaleY,
- //   526 * scaleX, (254 + dropOffsetY) * scaleY
-//);
-//ctx.bezierCurveTo(
- //   480 * scaleX, (221 + dropOffsetY) * scaleY,
- //   375 * scaleX, (203 + dropOffsetY) * scaleY,
- //   292 * scaleX, (254 + dropOffsetY) * scaleY
-//);
-//ctx.closePath();
-
-//ctx.fillStyle = "white"; 
-//ctx.fill();
-//ctx.strokeStyle = "black";
-//ctx.lineWidth = 2;
-//ctx.stroke();
 </script>
 </body>
 
